@@ -26,7 +26,7 @@ Quick start
 2. Add the "translation_server" URL like this::
 
 ```
-    TRANSLATION_SERVER_URL = u"http://localhost:8001/api/translation"
+    TRANSLATION_SERVER_URL = u"http://localhost:8000/api/translation"
 ```
 
 3. Run ```python manage.py sync_translation``` to sync the server with the client.
