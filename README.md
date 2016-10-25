@@ -1,14 +1,14 @@
 Django translation client
 =========================
 
-Polls is a simple Django app to conduct Web-based polls. For each
-question, visitors can choose between a fixed number of answers.
+Django translation client is a simple Django app to sync the translations from the translation server to the project.
 
 
 Requirements
 -----------
 
 requests
+
 django-translation-server # Installed in local or remote server
 
 Quick start
