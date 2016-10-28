@@ -99,3 +99,4 @@ out
 gen
 .gitignore
 .idea/
+/setup.py
