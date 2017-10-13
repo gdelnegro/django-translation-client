@@ -5,6 +5,7 @@ from datetime import datetime
 from django.core.management import call_command
 from django.utils.translation import to_locale
 from django.conf import settings
+from translation_client.exceptions import InvalidSettingsException
 import os
 import requests
 
@@ -96,6 +97,8 @@ msgstr ""
         )
 
     def handle(self, *args, **options):
+        if len(settings.LANGUAGES) == 0:
+            raise InvalidSettingsException("You need at least one language on your project settings")
         self.languages_list = [lang[0] for lang in settings.LANGUAGES]
         self.locale_path = options['locales_dir'] if len(options['locales_dir']) > 1 else self.BASE_DIR
         self.__create_translation_files()
